@@ -1,0 +1,16 @@
+<div class="container-fluid">
+<h1>Juros Simples</h1>
+<h2>Número de meses (Período)</h2>
+<input class="form-control" type="number" [(ngModel)]="n">
+<h2>Valor Presente</h2>
+<input class="form-control" type="number" [(ngModel)]="v">
+<h2>Taxa de juros (%)</h2>
+<input class="form-control" type="number" [(ngModel)]="j">
+<hr />
+<table>
+  <tr *ngFor="let item of getJurosSimples(); index as i">
+    <td>Mês {{i+1}}: </td>
+    <td>R$ {{item}} </td>
+  </tr>
+</table>
+</div>
